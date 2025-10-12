@@ -23,20 +23,26 @@ public class Main {
     double precioDiaAlbum = 1.80;
     double precioDiaVideojuego = 2.50;
 
+    int totalArticulosAlquilados = 11;
+
     int diasAlqLibro1 = 20;
     int diasAlqLibro2 = 30;
     int diasAlqLibro3 = 15;
     int diasAlqLibro4 = 14;
+    int totalLibros = 4;
 
     int diasAlqPelicula1 = 3;
     int diasAlqPelicula2 = 6;
+    int totalPeliculas = 2;
 
     int diasAlqAlbum1 = 2;
     int diasAlqAlbum2 = 7;
+    int totalAlbumes = 2;
 
     int diasAlqVideojuego1 = 30;
     int diasAlqVideojuego2 = 29;
     int diasAlqVideojuego3 = 10;
+    int totalVideojuegos = 3;
 
     double ingresosMesLibros = (diasAlqLibro1 + diasAlqLibro2 + diasAlqLibro3 + diasAlqLibro4) * precioDiaLibro;
     double ingresosMesPeliculas = (diasAlqPelicula1 + diasAlqPelicula2) * precioDiaPelicula;
@@ -107,8 +113,12 @@ public class Main {
 
         System.out.println("Precio medio del catálogo: " + ((double)Math.round(precioMedio * 100d) / 100d) + divisaDia);
 
+        System.out.println("\n" + "***Ejercicio 5: Porcentajes de artículos alquilados de cada tipo***");
 
-
-
+        System.out.println("Total artículos alquilados: " + totalArticulosAlquilados);
+        System.out.println("Libros: " + (totalLibros * 100/totalArticulosAlquilados) + "%");
+        System.out.println("Películas: " + (totalPeliculas * 100/totalArticulosAlquilados) + "%");
+        System.out.println("Albumes: " + (totalAlbumes * 100/totalArticulosAlquilados) + "%");
+        System.out.println("Videojuegos: " + (totalVideojuegos * 100/totalArticulosAlquilados) + "%");
     }
 }
