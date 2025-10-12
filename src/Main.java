@@ -38,26 +38,26 @@ public class Main {
 
         //Instrucciones para posibles salidas según diferentes entradas
 
-        System.out.println("Elige qué quieres alquilar dentro del catálogo");
+        System.out.println("Elige qué tipo de procuto te gustaría alquilar: películas, libros, albumes o videojuegos");
         String categoría = sc.nextLine();
         System.out.println(categoría);
         if (categoría.equals("libro") || categoría.equals("Libro") || categoría.equals("Libros") || categoría.equals("libros")){
-            System.out.println("Cuantas unidades quieres");
+            System.out.println("Indica cuántas unidades de este libro te gustaría alquilar hoy");
             int unitbook = sc.nextInt();
             double precio= unitbook*precioDiaLibro;
             System.out.println("Saldría por " + precio + "€ en total");
-        } else if (categoría.equals("película") || categoría.equals("Película") || categoría.equals("PELÍCULA") || categoría.equals("PELÍCULAS") || categoría.equals("películas") || categoría.equals("Películas")) {
-            System.out.println("Cuantas unidades quieres");
+        } else if (categoría.equals("película") || categoría.equals("Película") || categoría.equals("pelicula") || categoría.equals("PELÍCULA") || categoría.equals("PELÍCULAS") || categoría.equals("películas") || categoría.equals("Películas")) {
+            System.out.println("Indica cuántas unidades de esta película te gustaría alquilar hoy");
             int unitfilm = sc.nextInt();
             double precio= unitfilm*precioDiaPelicula;
             System.out.println("Saldría por " + precio + "€ en total");
         } else if (categoría.equals("JUEGOS") || categoría.equals("JUEGO") || categoría.equals("Juego") || categoría.equals("Juegos") || categoría.equals("juego") || categoría.equals("juegos")) {
-            System.out.println("Cuantas unidades quieres");
+            System.out.println("Indica cuántas unidades de este videojuego te gustaría alquilar hoy");
             int unitgames = sc.nextInt();
             double precio= unitgames*precioDiaVideojuego;
             System.out.println("Saldría por " + precio + "€ en total");
         } else if (categoría.equals("ALBUM") || categoría.equals("ALBUMES") || categoría.equals("Album") || categoría.equals("Albumes") || categoría.equals("album") || categoría.equals("albumes")) {
-            System.out.println("Cuantas unidades quieres");
+            System.out.println("Indica cuántas unidades de este album te gustaría alquilar hoy");
             int unitalbums = sc.nextInt();
             double precio= unitalbums*precioDiaAlbum;
             System.out.println("Saldría por " + precio + "€ en total");
