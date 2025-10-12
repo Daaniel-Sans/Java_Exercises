@@ -13,7 +13,6 @@ public class Main {
     String Album = "Master of Puppets";
     String Videojuego = "MGS3: Snake Eater";
 
-
     int añoLibro = 1960;
     int añoPelicula = 1999;
     int añoAlbum = 1986;
@@ -47,6 +46,12 @@ public class Main {
     final String divisaDia = "€/Día";
     final String divisa = "€";
 
+    double descuento = 1 - 0.1;
+    double totalDescuentoV = ingresosMesVideojuegos * descuento;
+
+    double precioMedio = precioDiaLibro + precioDiaPelicula + precioDiaAlbum + precioDiaVideojuego / 4;
+
+
     //Instrucciones para salida de datos
 
     Scanner sc = new Scanner (System.in);
@@ -76,13 +81,13 @@ public class Main {
             System.out.println("Videojuegos: " + ingresosMesVideojuegos + divisa + " del total");
             System.out.println("TOTAL: " + totalMes + divisa);
 
-        }else if (categoría.equals("libro") || categoría.equals("Libro") || categoría.equals("Libros") || categoría.equals("libros") || categoría.equals("Matar a un ruiseñor") || categoría.equals("matar a un ruiseñor")|| categoría.equals("MATAR A UN RUISEÑOR")){
+        } else if (categoría.equals("libro") || categoría.equals("Libro") || categoría.equals("Libros") || categoría.equals("libros") || categoría.equals("Matar a un ruiseñor") || categoría.equals("matar a un ruiseñor")|| categoría.equals("MATAR A UN RUISEÑOR")){
             System.out.println("Libros alquilados a 0.10€/día: "+"\n" + "LIBRO_1: 20 DIAS" + "\n" + "LIBRO_2: 30 DIAS" + "\n" + "LIBRO_3: 15 DIAS" + "\n" + "LIBRO_4: 14 DIAS" + "\n" + "INGRESOS: " + ingresosMesLibros + divisa + " del total");
 
         } else if (categoría.equals("película") || categoría.equals("Película") || categoría.equals("pelicula") || categoría.equals("peliculas") || categoría.equals("PELÍCULA") || categoría.equals("PELÍCULAS") || categoría.equals("películas") || categoría.equals("Películas")) {
             System.out.println("Películas alquiladas a 2.75€/día: "+"\n" + "PELICULA_1: 3 DIAS" + "\n" + "PELICULA_2: 6 DIAS" + "\n" + "INGRESOS: " + ingresosMesPeliculas + divisa + " del total");
 
-        } else if (categoría.equals("JUEGOS") || categoría.equals("JUEGO") || categoría.equals("Juego") || categoría.equals("Juegos") || categoría.equals("juego") || categoría.equals("juegos")) {
+        } else if (categoría.equals("JUEGOS") || categoría.equals("JUEGO") || categoría.equals("videojuegos") || categoría.equals("VIDEOJUEGOS") || categoría.equals("Videojuego") || categoría.equals("Videojuegos") || categoría.equals("videojuego") || categoría.equals("Juego") || categoría.equals("Juegos") || categoría.equals("juego") || categoría.equals("juegos")) {
             System.out.println("Videojuegos alquilados a 2.50€/día: "+"\n" + "VIDEOJUEGO_1: 30 DIAS" + "\n" + "VIDEOJUEGO_2: 29 DIAS" + "\n" + "VIDEOJUEGO_3: 10 DIAS"  + "\n" + "INGRESOS: " + ingresosMesVideojuegos + divisa + " del total");
 
         } else if (categoría.equals("ALBUM") || categoría.equals("ALBUMES") || categoría.equals("Album") || categoría.equals("Albumes") || categoría.equals("album") || categoría.equals("albumes")) {
@@ -91,5 +96,19 @@ public class Main {
         } else System.out.println("Ups... No hemos encontrado nada con ese nombre. Reinicia el programa y prueba de nuevo :)");
 
         System.out.println("\n" + "***Ejercicio 3: Descuento***");
+
+        System.out.println("Artículo: " + Videojuego);
+        System.out.println("Unidades alquiladas: 3");
+        System.out.println("Subtotal: " + ingresosMesVideojuegos + divisa);
+        System.out.println("Descuento: 10%");
+        System.out.println("Total con descuento: " + totalDescuentoV + divisa);
+
+        System.out.println("\n" + "***Ejercicio 4: Precio medio***");
+
+        System.out.println("Precio medio del catálogo: " + ((double)Math.round(precioMedio * 100d) / 100d) + divisaDia);
+
+
+
+
     }
 }
